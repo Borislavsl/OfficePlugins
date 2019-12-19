@@ -231,7 +231,7 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <None Include="WordAddInForExportToPDF_TemporaryKey.pfx" />
+    <EmbeddedResource Include="WordAddInForExportToPDF_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OutputPdfDocuments\Aspose\" />
