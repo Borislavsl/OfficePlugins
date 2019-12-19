@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using Microsoft.Office.Interop.Excel;
+﻿using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Tools.Ribbon;
 using AddInUtilities;
 
@@ -32,46 +30,6 @@ namespace ExcelAddInForExportToPDF
                 exportResult = VSTOExportWorkbookToPdf(excelWorkbook, outputPath);
 
             Util.ShowExportResult(exportResult, "Workbook");
-        }
-
-        private string VSTOExportWorkbookToPdf(Workbook excelWorkbook, string outputPath)
-        {
-            var resultMessage = string.Empty;
-
-            try
-            {
-                excelWorkbook.ExportAsFixedFormat(XlFixedFormatType.xlTypePDF, outputPath);
-            }
-            catch (Exception ex)
-            {
-                resultMessage = ex.Message;
-            }
-
-            return resultMessage;
-        }
-
-        private string AsposeExportWorkbookToPdf(Workbook excelWorkbook, string outputPath)
-        {
-            var resultMessage = string.Empty;
-            string tempFile = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".xlsx");
-
-            try
-            {
-                excelWorkbook.SaveCopyAs(tempFile);
-
-                var asposeWorkbook = new Aspose.Cells.Workbook(tempFile);
-                asposeWorkbook.Save(outputPath, Aspose.Cells.SaveFormat.Pdf);
-            }
-            catch (Exception ex)
-            {
-                resultMessage = ex.Message;
-            }
-            finally
-            {
-                File.Delete(tempFile);
-            }
-
-            return resultMessage;
         }
     }
 }

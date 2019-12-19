@@ -183,6 +183,9 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="ExportToPdfAspose.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExportToPdf.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -191,6 +194,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportToPdfVSTO.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="ExportToPdf.resx">
       <DependentUpon>ExportToPdf.cs</DependentUpon>
