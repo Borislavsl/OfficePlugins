@@ -223,6 +223,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="SampleWordDocuments\EventBrochure.docx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -233,7 +234,8 @@
     <None Include="WordAddInForExportToPDF_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Output\" />
+    <Folder Include="OutputPdfDocuments\Aspose\" />
+    <Folder Include="OutputPdfDocuments\VSTO\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\VisualStudio.png" />

@@ -223,6 +223,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="SampleExcelWorkbooks\sampleApplyingThemesInChart.xlsx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -232,7 +233,8 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Output\" />
+    <Folder Include="OutputPdfDocuments\Aspose\" />
+    <Folder Include="OutputPdfDocuments\VSTO\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\aspose.png" />

@@ -16,7 +16,7 @@ namespace AddInUtilities
         {
             var uri = new System.Uri(Assembly.GetExecutingAssembly().CodeBase).AbsolutePath;
             var projectFolder = new DirectoryInfo(uri).Parent.Parent.Parent.FullName;
-            var outputFolder = Path.Combine(projectFolder, "Output", exportType);
+            var outputFolder = Path.Combine(projectFolder, "OutputPdfDocuments", exportType);
 
             return outputFolder;
         }
@@ -28,7 +28,7 @@ namespace AddInUtilities
                 DefaultExt = "*.pdf",
                 Filter = "PDF Files (*.pdf)|*.pdf",
                 InitialDirectory = folderName,
-                FileName = fileName,
+                FileName = Path.GetFileNameWithoutExtension(fileName),
                 Title = exportType + dialogTitle
             };
 
